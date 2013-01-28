@@ -1,0 +1,69 @@
+<?php
+/**
+ * @file
+ */
+
+function soc_odder_update_7000() {
+  modules_enable(array('comment', 'field_ui', 'media', 'menu', 'prelaunch', 'toolbar'));
+  modules_disable(array('dblog', 'update'));
+}
+
+/*
+// hvem skal redigere / vedligeholde sitet?
+
+
+// wysiwyg modul
+
+// ----
+- Mailchimp: Nyhedsbrev
+
+// Kandidater
+- Navn
+- Billede
+- CV
+- Om Ole
+- Jeg vil arbejde for
+- E-mail
+- Facebook / Linkedin - evt. Twitter
+- Kvalificeret medieindhold
+
+// Indlæg - arbejdsprogram - enkeltpunkter
+- Overskrift
+- Billede
+- Resume
+- Tekst
+- Mulighed for at kommentere (evt. Disqus)
+- Forfatterne - entityreference
+- Like / Dislike-knapper
+
+// Kalender
+- Dato mv.
+- Link
+- Forfremmet til forside
+    
+// Event
+- Titel
+- Link
+- Tekst
+- Entityreference til user
+
+// Resultater
+- Overskrift
+- Billede
+- Tekstområde - WYSIWYG
+
+// Spørgehjørnet
+- Poll - jf. forsiden --> Hvis man har fået spørgsmål tidligere, så får man måske en ny.
+
+// Søgningen
+Autocomplete på søgningen
+
+// Målgruppe
+--  
+* 17 - 18 år - 45-50 år
+* 16-26 årige de mest politisk aktive, men en helt anden måde --> FB, Kommentere mv. --> Synes om demokratiet.
+
+// Deadline backend: 1. marts 
+// Deadlines: 1. april
+// Pyntning: 1. maj
+*/

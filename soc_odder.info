@@ -1,0 +1,4 @@
+name = Soc Odder Core
+description = Core stuff for Soc Odder
+core = 7.x
+package = Soc Odder
