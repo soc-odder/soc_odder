@@ -1,0 +1,54 @@
+/**
+ * @file
+ */
+
+function soc_odder_update_7000() {
+  modules_enable(array('admin_views', 'backports', 'better_formats', 'comment', 'comment_notify', 
+    'date', 'date_popup', 'email', 'entityreference', 'fences', 'field_group', 'field_ui', 'google_analytics',
+    'link', 'linkit', 'locale', 'logintoboggan', 'media', 'menu', 'prelaunch', 'mailchimp_lists', 'metatag',
+    'module_filter', 'pagemanager', 'panels', 'scheduler', 'title', 'toolbar', 'wysiwyg', 'transliteration',
+    'pathauto', 'taxonomy', 'redirect'));
+  modules_disable(array('dblog', 'update'));
+
+  // Setting for date api.
+  variable_set('date_first_day', 1);
+
+  // Set correct theme
+  $theme = 'rose';
+  $admin_theme = 'seven';
+
+  // Enable standard theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', $theme)
+    ->execute();
+
+  // Disable bartik.
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+
+  variable_set('theme_default', $theme);
+
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', $admin_theme)
+    ->execute();
+  variable_set('admin_theme', $admin_theme);
+  variable_set('node_admin_theme', '1');
+
+
+  // add role administrator --> make sure it has all privileges
+  // add role editor
+  
+  // setup languages - da disable en
+  
+  // added content panes
+  
+  // setup paths
+}
