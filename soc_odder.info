@@ -1,20 +1,19 @@
 name = Soc Odder
 core = 7.x
 package = Odder 2014
+php = 5.2.4
 version = 7.x-0.1
 project = soc_odder
 dependencies[] = features
 dependencies[] = locale
-features[features_api][] = api:1
-features[language][] = da
-features[user_role][] = administrator
-features[user_role][] = editor
-
-; custom dependencies
 dependencies[] = soc_odder_calendar
 dependencies[] = soc_odder_candidates
 dependencies[] = soc_odder_pages
 dependencies[] = soc_odder_policy
-dependencies[] = soc_odder_stories
 dependencies[] = soc_odder_search
+dependencies[] = soc_odder_stories
 dependencies[] = soc_odder_wysiwyg
+features[features_api][] = api:1
+features[language][] = da
+features[user_role][] = administrator
+features[user_role][] = editor
