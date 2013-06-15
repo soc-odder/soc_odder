@@ -2,3 +2,14 @@
 /**
  * @file
  */
+
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ *
+ * Remove the links from the poll block.
+ */
+function soc_odder_block_view_poll_recent_alter(&$data, $block) {
+  if (isset($data['content']['links'])) {
+    unset($data['content']['links']);
+  }
+}
